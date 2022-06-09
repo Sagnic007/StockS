@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>Admin Login</title>
-
+    <link href="img/iconFav.jpeg" rel="icon">
+    <link href="img/iconFav.jpeg" rel="apple-touch-icon">
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -41,7 +42,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form method="POST" id="myform" name="check" onsubmit="check()"class="user">
+                                    <!-- <form method="POST" id="myform" name="check" onsubmit="check()"class="user"> -->
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="Email" aria-describedby="emailHelp"
@@ -57,12 +58,12 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <button class="btn btn-primary btn-user btn-block"> Login</button> 
+                                        <button class="btn btn-primary btn-user btn-block" onclick="submit()"> Login</button> 
                                             <div id="demo"></div>
                                         </a>
                                         <hr>
                                         
-                                    </form>
+                                    <!-- </form> -->
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
@@ -93,15 +94,15 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <script type="text/javascript">
-        function check(){
+        function submit(){
             var email = document.getElementById("Email").value;
             var pass = document.getElementById("Password").value;
 
-            if(email == "admin@gmail.com" && pass == "12345"){
-                document.getElementById("myform").action = "/404.html";
+            if(email === "admin1@gmail.com" && pass === "admin1@123" || email === "admin2@gmail.com" && pass === "admin2@123" || email === "admin3@gmail.com" && pass === "admin3@123" || email === "admin4@gmail.com" && pass === "admin4@123" || email === "admin5@gmail.com" && pass === "admin5@123"){
+                window.location="https://sagnic007.github.io/StockS/Stock/adminpanel/"
             }
             else{
-                window.location.href="404.html";
+                window.location.href="https://sagnic007.github.io/StockS/Stock/adminpanel/404.html";
             }
         }
         
